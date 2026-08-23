@@ -884,7 +884,7 @@ function flightCard(f){
       <div class="field"><label>Booking reference</label><input class="mono" value="${esc(f.bookingRef)}" onchange="updFlight('${f.id}','bookingRef',this.value)"></div>
       <div class="field"><label>Status</label>
         <select onchange="updFlight('${f.id}','status',this.value)">
-          ${['Booked','Checked-in','Boarding','Delayed','Cancelled','Completed'].map(s=>`<option ${s===f.status?'selected':''}>${s}</option>`).join('')}
+          ${['Not booked','Booked','Checked-in','Boarding','Delayed','Cancelled','Completed'].map(s=>`<option ${s===f.status?'selected':''}>${s}</option>`).join('')}
         </select>
       </div>
     </div>
